@@ -2,7 +2,7 @@
   "name": "boxingsaigon-view-point",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nguyenhuukhanhduy.github.io/BoxingSaigonCheckPoint/",
+  "homepage": "http://localhost:3001",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
