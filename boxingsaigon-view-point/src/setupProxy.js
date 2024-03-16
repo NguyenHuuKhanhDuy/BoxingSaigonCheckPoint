@@ -5,7 +5,7 @@ const tokenProxy = {
 }
 
 const apiProxy = {
-    target: 'https://id.kiotviet.vn',
+    target: 'https://public.kiotapi.com',
     changeOrigin: true
 }
 
@@ -15,7 +15,7 @@ module.exports = function(app) {
     createProxyMiddleware(tokenProxy)
   );
   app.use(
-    "/customer",
+    '/customers',
     createProxyMiddleware(apiProxy)
   );
 };
