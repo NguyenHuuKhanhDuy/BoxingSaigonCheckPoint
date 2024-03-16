@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/BoxingSaigonCheckPoint/static/css/main.94dcfb5e.css",
+    "main.js": "/BoxingSaigonCheckPoint/static/js/main.19efce31.js",
+    "static/media/background.jpg": "/BoxingSaigonCheckPoint/static/media/background.97326d21c7e452de27cb.jpg",
+    "index.html": "/BoxingSaigonCheckPoint/index.html",
+    "main.94dcfb5e.css.map": "/BoxingSaigonCheckPoint/static/css/main.94dcfb5e.css.map",
+    "main.19efce31.js.map": "/BoxingSaigonCheckPoint/static/js/main.19efce31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94dcfb5e.css",
+    "static/js/main.19efce31.js"
+  ]
+}
