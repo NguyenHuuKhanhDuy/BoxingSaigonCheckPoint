@@ -12,39 +12,20 @@ function Home() {
     const [isLoad, setIsLoad] = useState(true)
     const [isShowPoint, setIsShowPoint] = useState(false)
 
-    useEffect(() => {
-        const fetchToken = async () => {
-            const body =
-                'scopes=PublicApi.Access&grant_type=client_credentials&client_id=5c6dc75f-2fc1-4052-901f-43268c73dd05&client_secret=FA574711D2414211A677A3EA8F1F8EE0BBD3A791';
-    
-            axios
-                .post('/connect/token', body, {
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                })
-                .then((response) => {
-                    setToken(response.data.access_token);
-                })
-                .catch((error) => {
-                    console.log('Error', error);
-                });
-        };
-        fetchToken()
-    },[])
-    
     const fetchCustomer = async () => {
         setIsLoad(true)
-        axios.get(`/customers?contactNumber=${phoneNumber}`, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    Retailer: 'tigris',
-                },
-            })
+        axios.get(`https://huciapi.com/customer?phoneNumber=${phoneNumber}`)
             .then((response) => {
-                setUser(response.data.data[0]);
+                if (typeof response.data.data === 'object'){
+                    setIsLoad(false)
+                    setUser(response.data.data.data)
+                    return
+                }
+
+                var data = JSON.parse(response.data.data)
+                console.log(data)
+                setUser(data.data[0]);
                 setIsLoad(false)
-                console.log(response.data.data[0])
             })
             .catch((error) => {
                 console.log('Error', error);

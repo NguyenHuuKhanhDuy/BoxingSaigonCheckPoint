@@ -2,7 +2,6 @@
   "name": "boxingsaigoncheckpoint",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nguyenhuukhanhduy.github.io/BoxingSaigonCheckPoint",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -21,6 +20,7 @@
     "babel-plugin-module-resolver": "^5.0.0",
     "customize-cra": "^1.0.0",
     "gh-pages": "^6.1.1",
+    "http-proxy-middleware": "^2.0.6",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.64.2"
   },
